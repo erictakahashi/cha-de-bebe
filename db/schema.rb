@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211223151) do
+ActiveRecord::Schema.define(version: 20131212232706) do
 
   create_table "users", force: true do |t|
     t.string   "father_name"
     t.string   "mother_name"
     t.string   "child_name"
     t.date     "event_date"
-    t.text     "mensage"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
