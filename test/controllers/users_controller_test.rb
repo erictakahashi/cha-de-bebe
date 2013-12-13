@@ -4,6 +4,27 @@ class UsersControllerTest < ActionController::TestCase
   test "pagina do formulario de cadastro deve abrir" do
     get :new
     assert_response :success
+
+    assert_select "form" do |elements|
+      elements.each do |element|
+        assert_select element, "input", 6
+      end
+    end
+
+    #assert_select "form" do
+    #  assert_select "[name=?]", /.+/
+    #end
+
+    assert_select "form input" do
+      assert_select "[name=?]", 'user[father_name]'
+      assert_select "[name=?]", 'user[mother_name]'
+      assert_select "[name=?]", 'user[child_name]'
+      assert_select "[name=?]", 'user[event_date]'
+      assert_select "[name=?]", 'commit'
+    end
+    assert_select "form textarea" do
+      assert_select "[name=?]", 'user[message]'
+    end
   end
 
   test "deve salvar o usuario submetido" do
