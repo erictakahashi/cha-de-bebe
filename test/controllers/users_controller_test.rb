@@ -15,8 +15,9 @@ class UsersControllerTest < ActionController::TestCase
                             event_date: Time.now,
                             message: 'Mensagem do chá de bebe'
                           }
+
     end
 
-    #assert_redirect_to user_path(assigns(:user))
+    assert_redirected_to user_path(assigns(:user))
   end
 end
