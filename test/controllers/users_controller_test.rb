@@ -11,17 +11,14 @@ class UsersControllerTest < ActionController::TestCase
       end
     end
 
-    #assert_select "form" do
-    #  assert_select "[name=?]", /.+/
-    #end
-
     assert_select "form input" do
       assert_select "[name=?]", 'user[father_name]'
       assert_select "[name=?]", 'user[mother_name]'
       assert_select "[name=?]", 'user[child_name]'
       assert_select "[name=?]", 'user[event_date]'
-      assert_select "[name=?]", 'commit'
+      assert_select "[type=?]", 'submit'
     end
+    
     assert_select "form textarea" do
       assert_select "[name=?]", 'user[message]'
     end
