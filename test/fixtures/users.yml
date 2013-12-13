@@ -1,0 +1,6 @@
+cha_de_alguem:
+  father_name: 'Fulano'
+  mother_name: 'Joana'
+  child_name: 'Spock'
+  event_date: <%= Time.now %>
+  message: 'Mensagem do chá de bebe'
