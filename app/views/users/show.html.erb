@@ -1,4 +1,4 @@
-<%= content_for :title, 'Chá de bebe | ' + @user.child_name %>
+<%= action_title 'Chá de bebe | ' + @user.child_name %>
 
 <%= label_tag :father_name, User.human_attribute_name(:father_name) %>
 <p id="father_name"><%= @user.father_name %></p>

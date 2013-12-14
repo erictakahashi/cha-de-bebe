@@ -1,6 +1,15 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
+  test "pagina index" do
+    get :index
+    assert_response :success
+
+    assert_select "title", "Bem vindo :: ChaDeBebe ::"
+
+    assert_select "h1", "Bem vindo" 
+  end
+
   test "rota da pagina index" do
     assert_routing({ path: 'users', method: :get }, { controller: 'users', action: 'index' })
   end
@@ -12,6 +21,10 @@ class UsersControllerTest < ActionController::TestCase
   test "pagina do formulario de cadastro deve abrir" do
     get :new
     assert_response :success
+
+    assert_select "title", "Cadastre seu Chá de Bebê :: ChaDeBebe ::"
+
+    assert_select "h1", "Cadastre seu Chá de Bebê" 
 
     assert_select "form" do |elements|
       elements.each do |element|
@@ -74,6 +87,11 @@ class UsersControllerTest < ActionController::TestCase
 
     get :show, id: user.id
     assert_response :success
+
+    assert_select "title", "Chá de bebe | " + user.child_name + " :: ChaDeBebe ::"
+
+    assert_select "h1", "Chá de bebe | " + user.child_name
+
     assert_select '#father_name', user.father_name
     assert_select '#mother_name', user.mother_name
     assert_select '#child_name', user.child_name
