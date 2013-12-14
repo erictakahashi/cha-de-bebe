@@ -1,12 +1,12 @@
 <%= content_for :title, 'Chá de bebe | ' + @user.child_name %>
 
-<%= label_tag :father_name, "Nome do pai" %>
+<%= label_tag :father_name, User.human_attribute_name(:father_name) %>
 <p id="father_name"><%= @user.father_name %></p>
-<%= label_tag :mother_name, "Nome da mãe" %>
+<%= label_tag :mother_name, User.human_attribute_name(:mother_name) %>
 <p id="mother_name"><%= @user.mother_name %></p>
-<%= label_tag :child_name, "Nome do bebê" %>
+<%= label_tag :child_name, User.human_attribute_name(:child_name) %>
 <p id="child_name"><%= @user.child_name %></p>
-<%= label_tag :event_date, "Data do nascimento" %>
+<%= label_tag :event_date, User.human_attribute_name(:event_date) %>
 <p id="event_date"><%= @user.event_date %></p>
-<%= label_tag :message, "Mensagem" %>
+<%= label_tag :message, User.human_attribute_name(:message) %>
 <p id="message"><%= @user.message %></p>

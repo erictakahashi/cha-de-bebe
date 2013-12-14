@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+    attributes:
+      user:
+        father_name: Nome do Pai
+        mother_name: Nome da Mãe
+        child_name: Nome do Bebê
+        event_date: Data do Nascimento
+        message: Mensagem

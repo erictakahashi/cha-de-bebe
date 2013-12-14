@@ -1,19 +1,19 @@
 <%= content_for :title, 'Cadastre seu Chá de Bebê'%>
 
 <%= form_for @user do |f| %>
-  <%= f.label :father_name, "Nome do pai" %>
+  <%= f.label :father_name %>
   <%= f.text_field :father_name %>
   <br>
-  <%= f.label :mother_name, "Nome da mãe" %>
+  <%= f.label :mother_name %>
   <%= f.text_field :mother_name %>
   <br>
-  <%= f.label :child_name, "Nome do bebê" %>
+  <%= f.label :child_name %>
   <%= f.text_field :child_name %>
   <br>
-  <%= f.label :event_date, "Data do nascimento" %>
+  <%= f.label :event_date %>
   <%= f.date_field :event_date %>
   <br>
-  <%= f.label :message, "Mensagem para os amigos" %>
+  <%= f.label :message %>
   <%= f.text_area :message %>
   <br>
   <%= f.submit "Enviar" %>
