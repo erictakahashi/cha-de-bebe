@@ -21,7 +21,17 @@
         null,
         null
       ],
+      "/home/blanko/cha-de-bebe/app/helpers/donations_helper.rb": [
+        1,
+        null
+      ],
       "/home/blanko/cha-de-bebe/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/blanko/cha-de-bebe/test/helpers/users_helper_test.rb": [
+        1,
+        null,
         1,
         null
       ],
@@ -64,9 +74,31 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/blanko/cha-de-bebe/test/controllers/donations_controller_test.rb": [
+        1,
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -183,6 +215,17 @@
         null,
         null
       ],
+      "/home/blanko/cha-de-bebe/app/controllers/donations_controller.rb": [
+        1,
+        null
+      ],
+      "/home/blanko/cha-de-bebe/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
       "/home/blanko/cha-de-bebe/app/controllers/users_controller.rb": [
         1,
         1,
@@ -223,15 +266,8 @@
         null,
         null,
         null
-      ],
-      "/home/blanko/cha-de-bebe/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
       ]
     },
-    "timestamp": 1387050299
+    "timestamp": 1387051605
   }
 }
