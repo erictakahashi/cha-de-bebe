@@ -46,4 +46,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "simplecov"
+gem 'simplecov', :require => false, :group => :test
