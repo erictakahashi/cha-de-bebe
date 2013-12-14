@@ -12,4 +12,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def action_title(title)
+    assert_select "title", title + " :: ChaDeBebe ::"
+    assert_select "h1"
+  end
 end

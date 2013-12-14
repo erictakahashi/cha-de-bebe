@@ -5,9 +5,7 @@ class UsersControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    assert_select "title", "Bem vindo :: ChaDeBebe ::"
-
-    assert_select "h1", "Bem vindo" 
+    action_title("Bem vindo")
   end
 
   test "rota da pagina index" do
@@ -22,9 +20,7 @@ class UsersControllerTest < ActionController::TestCase
     get :new
     assert_response :success
 
-    assert_select "title", "Cadastre seu Chá de Bebê :: ChaDeBebe ::"
-
-    assert_select "h1", "Cadastre seu Chá de Bebê" 
+    action_title("Cadastre seu Chá de Bebê")
 
     assert_select "form" do |elements|
       elements.each do |element|
@@ -88,9 +84,7 @@ class UsersControllerTest < ActionController::TestCase
     get :show, id: user.id
     assert_response :success
 
-    assert_select "title", "Chá de bebe | " + user.child_name + " :: ChaDeBebe ::"
-
-    assert_select "h1", "Chá de bebe | " + user.child_name
+    action_title("Chá de bebe | " + user.child_name)
 
     assert_select '#father_name', user.father_name
     assert_select '#mother_name', user.mother_name
