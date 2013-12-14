@@ -45,12 +45,25 @@ class UsersControllerTest < ActionController::TestCase
                             event_date: Time.now,
                             message: 'Mensagem do chá de bebe'
                           }
-
     end
 
     assert_redirected_to user_path(assigns(:user))
   end
 
+  test "renderizar a view new quando falhar o formulario" do
+    assert_no_difference('User.count') do
+      post :create, user: {
+                            father_name: ' ', 
+                            mother_name: 'Joana',
+                            child_name: 'Spock',
+                            event_date: Time.now,
+                            message: 'Mensagem do chá de bebe'
+                          }
+    end
+
+    assert_template "new"
+  end
+    
   test "rota da pagina de exibição do cha" do
     assert_routing({ path: 'users/1', method: :get }, { controller: 'users', action: 'show', id: '1' })
   end
