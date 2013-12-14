@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
+  test "rota da pagina index" do
+    assert_routing({ path: 'users', method: :get }, { controller: 'users', action: 'index' })
+  end
+
+  test "rota da pagina de cadastro do cha" do
+    assert_routing({ path: 'users/new', method: :get }, { controller: 'users', action: 'new' })
+  end
+
   test "pagina do formulario de cadastro deve abrir" do
     get :new
     assert_response :success
@@ -24,6 +32,10 @@ class UsersControllerTest < ActionController::TestCase
     end
   end
 
+  test "rota da pagina de criação do cha" do
+    assert_routing({ path: 'users', method: :post }, { controller: 'users', action: 'create' })
+  end
+
   test "deve salvar o usuario submetido" do
     assert_difference('User.count') do
       post :create, user: {
@@ -37,6 +49,10 @@ class UsersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to user_path(assigns(:user))
+  end
+
+  test "rota da pagina de exibição do cha" do
+    assert_routing({ path: 'users/1', method: :get }, { controller: 'users', action: 'show', id: '1' })
   end
 
   test "deve exibir o chá de bebe" do
