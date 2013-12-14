@@ -1,5 +1,5 @@
 ChaDeBebe::Application.routes.draw do
-  resources 'users', only: [:new, :create, :show, :index]
+  resources 'users', only: [:index, :new, :create, :show, :destroy]
 
 
 

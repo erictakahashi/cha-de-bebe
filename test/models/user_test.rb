@@ -23,4 +23,12 @@ class UserTest < ActiveSupport::TestCase
   test "usuario tem donation" do
     assert_equal [donations(:one), donations(:two)].sort, users(:cha_de_alguem).donations.sort
   end
+
+  test "não deve excluir um cha se houver donations" do
+    user = users(:cha_de_alguem)
+
+    assert_no_difference('User.count') do
+      user.destroy
+    end
+  end
 end

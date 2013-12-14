@@ -74,10 +74,6 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_select 'ul'
   end
-
-  test "geração da mensagem de erro quando na validação do formulario" do
-
-  end
     
   test "rota da pagina de exibição do cha" do
     assert_routing({ path: 'users/1', method: :get }, { controller: 'users', action: 'show', id: '1' })
@@ -98,4 +94,17 @@ class UsersControllerTest < ActionController::TestCase
     assert_select '#event_date', user.event_date.to_s
     assert_select '#message', user.message
   end
+
+  test "rota de deleção de um cha" do
+    assert_routing({ path: 'users/1', method: :delete }, { controller: 'users', action: 'destroy', id: '1' })
+  end
+
+  test "deve excluir um cha" do
+    user = users(:cha_de_fulano)
+
+    assert_difference('User.count', -1) do
+      delete :destroy, id: user.id
+    end
+  end
+
 end

@@ -60,6 +60,15 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/home/blanko/cha-de-bebe/test/controllers/users_controller_test.rb": [
@@ -141,10 +150,6 @@
         null,
         null,
         1,
-        null,
-        null,
-        null,
-        1,
         1,
         null,
         null,
@@ -162,6 +167,19 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -191,6 +209,13 @@
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
         2,
         null,
         null,
@@ -207,6 +232,6 @@
         null
       ]
     },
-    "timestamp": 1387046529
+    "timestamp": 1387050299
   }
 }

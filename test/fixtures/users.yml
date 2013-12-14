@@ -4,3 +4,10 @@ cha_de_alguem:
   child_name: 'Spock'
   event_date: <%= Time.now %>
   message: 'Mensagem do chá de bebe'
+
+cha_de_fulano:
+  father_name: 'Ze'
+  mother_name: 'Maria'
+  child_name: 'Jao'
+  event_date: <%= Time.now %>
+  message: 'Mensagem do chá de bebe 2'
