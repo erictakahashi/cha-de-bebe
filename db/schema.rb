@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212232706) do
+ActiveRecord::Schema.define(version: 20131214172504) do
+
+  create_table "donations", force: true do |t|
+    t.string   "email"
+    t.float    "value"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "father_name"

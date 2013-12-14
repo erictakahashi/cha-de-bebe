@@ -1,8 +1,15 @@
 {
   "MiniTest": {
     "coverage": {
+      "/home/blanko/cha-de-bebe/app/models/donation.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/blanko/cha-de-bebe/app/models/user.rb": [
         1,
+        1,
+        null,
         1,
         null
       ],
@@ -16,6 +23,15 @@
       ],
       "/home/blanko/cha-de-bebe/app/helpers/users_helper.rb": [
         1,
+        null
+      ],
+      "/home/blanko/cha-de-bebe/test/models/donation_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/blanko/cha-de-bebe/test/models/user_test.rb": [
@@ -38,6 +54,10 @@
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
         1,
         null,
         null
@@ -187,6 +207,6 @@
         null
       ]
     },
-    "timestamp": 1387041490
+    "timestamp": 1387046529
   }
 }

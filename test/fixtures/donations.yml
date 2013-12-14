@@ -3,9 +3,9 @@
 one:
   email: MyString
   value: 1.5
-  user_id: 1
+  user: cha_de_alguem
 
 two:
   email: MyString
   value: 1.5
-  user_id: 1
+  user: cha_de_alguem
