@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "validação da presença do nome do pai" do
+    user = User.new father_name: nil
+
+    refute user.valid?
+  end
 end
