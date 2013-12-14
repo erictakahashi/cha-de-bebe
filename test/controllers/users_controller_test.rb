@@ -71,6 +71,12 @@ class UsersControllerTest < ActionController::TestCase
     end
 
     assert_template "new"
+
+    assert_select 'ul'
+  end
+
+  test "geração da mensagem de erro quando na validação do formulario" do
+
   end
     
   test "rota da pagina de exibição do cha" do
